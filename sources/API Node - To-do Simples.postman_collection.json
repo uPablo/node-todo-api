@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "c041d355-fca0-41e5-9ab1-7a4760dfeb6b",
+		"name": "API Node - To-do Simples",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/todo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE}}/todo",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/todo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Implementar um sistema de build: Dependendo das necessidades do seu projeto, você pode querer configurar um sistema de build, como o Webpack ou o Gulp, para automatizar tarefas, como compilação de código, minificação e otimização.",
+							"type": "default"
+						},
+						{
+							"key": "done",
+							"value": "false",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE}}/todo",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/todo/:id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Gerenciar o controle de versão: Use uma ferramenta de controle de versão, como o Git, para controlar as alterações no seu projeto. Isso ajudará a manter um histórico de alterações e permitirá que você trabalhe em equipe de forma eficiente.",
+							"type": "default"
+						},
+						{
+							"key": "done",
+							"value": "false",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE}}/todo/8",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"todo",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/todo/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BASE}}/todo/9",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"todo",
+						"9"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE",
+			"value": "http://localhost:",
+			"type": "default"
+		}
+	]
+}
